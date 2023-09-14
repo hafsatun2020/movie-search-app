@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-family: DM Sans;
+
+
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+}
+
+.top {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 70vh;
+  padding: 1.3rem;
+  color: white;
+  background-image: url('./images/Poster.png');
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.menu,
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.menu>a {
+  color: white;
+  margin: 15px;
+  font-size: 1.12rem;
+}
+
+
+
+input {
+  width: 300px;
+  padding: 10px;
+  background: none;
+  border: 1px solid white;
+  color: white;
+
+}
+
+
+#tv-logo {
+  margin: 15px;
+}
+
+button {
+  background: #BE123C;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+}
+
+
+.heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.see {
+  color: #BE123C;
+}
+
+.card-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-card {
+  width: 250px;
+  height: 400px;
+  padding: 0;
+
+}
+
+.mid-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#fav-btn {
+  color: black ;
+  background: red;
+}
+
+/*footer */
+.terms {
+  display: flex;
+  width: 100vw;
+  max-width: 500px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  width: 100vw;
+  max-width: 300px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.movie-preview{
+  width: 100%;
+  border: none;
+}
