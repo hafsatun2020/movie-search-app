@@ -9,7 +9,7 @@ export default function Card(props) {
                 <a href="./movies.html"><h3 data-testid="movie-title" >{props.title}</h3></a>
                 <div className="mid-div" >
                     <p data-testid="movie-release-date" >{props.release_date}</p>
-                    <img src="./images/Favorite.svg" id="fav-btn" data-testid="fav-btn" />
+                    <img src="./src/images/Favorite.svg" id="fav-btn" data-testid="fav-btn" />
 
                 </div>
 

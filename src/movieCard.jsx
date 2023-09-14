@@ -27,17 +27,38 @@ export default function MovieCard() {
 
 
     return (
-        <div className="movie-preview" data-testid="movie-card">
+        <>
+        < div className='menu-container'>
+        <div className="logo">
+                    <img src={TV} id="tv-logo" alt="tc logo"/>
+                    <h2>Movie Box</h2>
+                </div>
+                <ul>
+                    <a href="#"><li>Home</li></a>
+                    <a href="#"><li>Home</li></a>
+                    <a href="#"><li>Home</li></a>
+                    <a href="#"><li>Home</li></a>
+                </ul>
+                <div className='pink-box'>
+                    <h4>Play movie quizes and earn free tickets</h4>
+                    <p>50k people are playing now</p>
+                    <button>Play NOw</button>
+                </div>
+                <a href="#">Logout</a>
+        </div>
+         <div className="movie-preview" data-testid="movie-preview-card">
             <img src={`https://image.tmdb.org/t/p/w780${movie.backdrop_path}`} data-testid="movie-poster" id="backdrop-img" alt="backdrop" />
             <a href="#"><h1 data-testid="movie-title" >{movie.title}</h1></a>
             <p data-testid="movie-overview" >{movie.overview}</p>
             <div className="mid-div" >
                 <p data-testid="movie-release-date" >Release date: {movie.release_date}</p>
-                <p data-testid="movie-runtime" >Runtime{movie.runtime}</p>
+                <p data-testid="movie-runtime" >Runtime: {movie.runtime}</p>
                 <img src={Favourite} id="fav-btn" data-testid="fav-btn"  alt="fabvtn"/>
 
             </div>
         </div>
+        </>
+       
        
 
         
