@@ -46,7 +46,7 @@ export default function MovieCard() {
                 </div>
                 <a href="#">Logout</a>
         </div>
-         <div className="movie-preview" data-testid="movie-preview-card">
+         <div className="movie-preview" data-testid="movie-card">
             <img src={`https://image.tmdb.org/t/p/w780${movie.backdrop_path}`} data-testid="movie-poster" id="backdrop-img" alt="backdrop" />
             <a href="#"><h1 data-testid="movie-title" >{movie.title}</h1></a>
             <p data-testid="movie-overview" >{movie.overview}</p>
