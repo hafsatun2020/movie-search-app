@@ -1,21 +1,21 @@
 import TV from './images/tv.png'
 import Menu from './images/Menu.png'
-import './index.css'
-export default function Header() {
+import Icon from './images/Icon.png'
+export default function Header(props) {
     return (
         <>
             <div className="navbar">
                 <div className="logo">
-                    <img src={TV} id="tv-logo" alt="tc logo"/>
+                    <img src={TV} id="tv-logo" alt="tvlogo" />
                     <h2>Movie Box</h2>
                 </div>
                 <div className="search">
                     <input type="search" data-testid="searchBtn" id="search-box" name="searchBox" placeholder="What do you want to watch..." />
-                    <button type="submit" id="search-btn" ><i className="fa-solid fa-magnifying-glass"></i></button>
+                    <img src={Icon} alt='search icon' className='icon' />
                 </div>
                 <div className="menu">
                     <a href="#">Sign in</a>
-                    <img src={Menu} id="menu-bars" alt="MENU LOGO" />
+                    <img src={Menu} alt="menulogo" id="menu-bars" />
                 </div>
 
             </div>

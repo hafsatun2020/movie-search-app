@@ -1,0 +1,341 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-family: 'DM Sans';
+  color: 333333;
+
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.top {
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 1.3rem;
+  color: white;
+  background-image: url('./images/Poster.png');
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.menu,
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.menu > a {
+  color: white;
+  margin: 15px;
+  font-size: 1.12rem;
+}
+
+
+h2 {
+  color: white;
+  margin: 15px;
+ 
+}
+
+.search {
+  width: 450px;
+ display: flex;
+ justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: 1px solid white;
+  color: white;
+
+}
+input {
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 90%;
+
+}
+.icon {
+  margin-right: 5px;
+}
+.menu > #tv-logo {
+  margin: 15px;
+}
+
+button {
+  background: #BE123C;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+}
+
+.description-box{
+margin-top: 100px;
+width: 30%;
+text-align: left;
+}
+.heading {
+  width: 100%;
+  margin: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+}
+
+.see {
+  color: #BE123C;
+}
+
+.card-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-card {
+  width: 250px;
+  height: 400px;
+  padding: 0;
+
+}
+
+.mid-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#fav-btn {
+  color: black ;
+  background: red;
+}
+
+/*footer */
+.terms {
+  display: flex;
+  width: 100vw;
+  max-width: 500px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  width: 100vw;
+  max-width: 300px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.preview-container{
+display: grid;
+grid-template-columns: 30% 70%;
+height: 100%;
+max-width: 900px;
+margin: auto;
+}
+
+.movie-preview{
+  width: 100%;
+  color: #666666;
+  border: none;
+}
+
+.menu-preview{
+  padding: 20px;
+  color: #666666;
+  display: block;
+  border-right: #BE123C 1px solid;
+  
+}
+#backdrop-img{
+  width: 100%;
+  height: 50vh;
+}
+
+.movie-preview > a {
+  text-decoration: none;
+  
+
+}
+.menu-preview > .logo{
+  color: black;
+}
+
+.pink-box{
+  padding: 10px;
+  border: #BE123C 2px solid;
+  background-color: #F8E7EB;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
+  width: 40%;;
+}
+.left{
+width: 60%;
+margin: 10px;
+}
+.bottom{
+  text-align: left;
+  padding: 0px;
+  display: flex;
+}
+
+li{
+  list-style-type: none;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  height: 20px;
+  background-color: #F8E7EB;
+  color: 333333;
+}
+
+ul{
+  width: 100%;
+  height: 40%;
+  margin: auto;
+}
+
+.pink{
+  color: #666666;
+  background-color: #F8E7EB;
+}
+.red{
+  background-color: #BE123C;
+  color: #F8E7EB;
+}
+.btns{
+  border: #666666 1px solid;
+  border-radius: 14px;
+  display: flex;
+  padding: 0;
+ 
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btns > p {
+  height: 100%;
+  padding: 10px;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.nav-link > p {
+ text-align: left;
+ width: 100%;
+ padding: 0px;
+ height: 20px;
+ margin: 10px;
+ display: flex;
+ align-items: center;
+  justify-content: flex-start;
+}
+
+.nav > .pink{
+  border-right: #BE123C  2px solid;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+
+@media (max-width: 580px) {
+  .top{
+    width: 100%;
+    height: 40vh;
+  }
+
+  input{
+    width: 70%;
+  }
+.card-container{
+  display: grid ;
+  grid-template-columns: 1fr  1fr;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.terms{
+  display: grid;
+  grid-template-columns: 1fr ;
+}
+  
+}
+
+@media (max-width: 440px) {
+  .top{
+    width: 100%;
+    height: 40vh;
+ 
+  }
+.menu > a {
+  font-size: 1rem;
+}
+
+.menu > img {
+  width: 20px;
+  height: 20px;
+}
+
+ #tv-logo {
+  width: 10px;
+  height: 10px;
+}
+.logo > h2{
+  font-size: 0.9rem;
+}
+  input{
+    width: 70%;
+  }
+.card-container{
+  display: grid ;
+  margin: auto;
+  grid-template-columns: 1fr  ;
+  align-items: center;
+  justify-content: center;
+}
+
+}

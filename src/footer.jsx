@@ -13,7 +13,7 @@ export default function Footer() {
                 <p>Privacy & Policy</p>
                 <p>Press Room</p>
             </div>
-            <p>© 2021 MovieBox by Adriana Eka Prayudha  </p>
+            <p>© 2021 MovieBox by Hafsat Nasidi  </p>
         </>
     )
 }

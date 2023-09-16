@@ -1,18 +1,32 @@
-import { Routes, Route } from "react-router-dom";
-import HomePage from "./home";
+import { Routes, Route, 
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements } from "react-router-dom";
+import React from "react";
+import HomePage, { loader as homePageLoader } from "./home";
 import MovieCard from "./movieCard";
-import './index.css'
+import ErrorPage  from "./error-page";
+import './App.css'
 
+const router = createBrowserRouter(createRoutesFromElements(
+          <Route >
+          <Route path="/" element={<HomePage />}  loader={homePageLoader} errorElement= {<ErrorPage />} />
+          <Route path="/movies/:id" element={<MovieCard />}  />
+         
+          </Route>
+         
+       
+))
 
- function App() {
+export default function App() {
 
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/movies/:id" element={<MovieCard />} />
-    </Routes>
-
+    <React.StrictMode>
+       <RouterProvider router={router} />
+  </React.StrictMode>
 
   )
 }
-export default App
+
+
+//{isValue  ?  movieCards : <img src={"./images/Spinner-1s-176px.gif"} /> } setting the laoding indicator

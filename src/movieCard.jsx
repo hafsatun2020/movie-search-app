@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import Favourite from './images/Favorite.svg'
+import { useParams, Link } from 'react-router-dom'
+import Expand from './images/Expand-Arrow.png'
+import Star from './images/Star.png'
+import TV from "./images/tv.png"
+import TVShow from './images/TV-Show.png'
+import HomeLogo from "./images/Home.png"
+import Logout from "./images/Logout.png"
+import Calender from './images/Calendar.png'
+import MovieProjector from "./images/Movie-Projector.png"
 
 const options = {
     method: 'GET',
@@ -11,11 +18,11 @@ const options = {
 };
 
 export default function MovieCard() {
-
+    //get Id of movie via use params
     const { id } = useParams()
     const [movie, setMovieDetails] = useState({})
     console.log(id)
-
+//fetch movies using params and store in a state
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/${id}`, options)
             .then(response => response.json())
@@ -23,51 +30,68 @@ export default function MovieCard() {
             .catch(err => console.error(err));
     }, [])
 
-    console.log(movie)
-
-
+    
     return (
-        <>
-        < div className='menu-container'>
-        <div className="logo">
+        <div className='preview-container'>
+        < div className='menu-preview'>
+                <div className="logo">
                     <img src={TV} id="tv-logo" alt="tc logo"/>
                     <h2>Movie Box</h2>
                 </div>
-                <ul>
-                    <a href="#"><li>Home</li></a>
-                    <a href="#"><li>Home</li></a>
-                    <a href="#"><li>Home</li></a>
-                    <a href="#"><li>Home</li></a>
-                </ul>
+                <div className='nav'>
+                    <div className='nav-link'><img src={HomeLogo} alt="logo home"/><p>Home</p></div>
+                    <div className='nav-link pink'><img src={MovieProjector} alt="logo projector"/><p>Movies</p></div>
+                    <div className='nav-link'><img src={TVShow} alt="logo tv show"/><p>TV Series</p></div>
+                    <div className='nav-link'><img src={Calender} alt="logo calender"/><p>Upcoming</p></div>
+                </div>
+                
                 <div className='pink-box'>
                     <h4>Play movie quizes and earn free tickets</h4>
                     <p>50k people are playing now</p>
                     <button>Play NOw</button>
                 </div>
-                <a href="#">Logout</a>
+                <a href="#"><img src={Logout} alt="logout logo"/>Logout</a>
+                
         </div>
-         <div className="movie-preview" data-testid="movie-card">
+         <div className="movie-preview" >
+            
+            
+           
             <img src={`https://image.tmdb.org/t/p/w780${movie.backdrop_path}`} data-testid="movie-poster" id="backdrop-img" alt="backdrop" />
-            <a href="#"><h1 data-testid="movie-title" >{movie.title}</h1></a>
-            <p data-testid="movie-overview" >{movie.overview}</p>
             <div className="mid-div" >
-                <p data-testid="movie-release-date" >Release date: {movie.release_date}</p>
-                <p data-testid="movie-runtime" >Runtime: {movie.runtime}</p>
-                <img src={Favourite} id="fav-btn" data-testid="fav-btn"  alt="fabvtn"/>
+                <p data-testid="movie-title" >{movie.title}</p>
+                <p data-testid="movie-release-date" > {movie.release_date}</p>
+                <p data-testid="movie-runtime" > {movie.runtime}</p>
+                <img src={Star}  id="star" alt="star"/>
+                <p data-testid="movie-votes" >{ movie.vote_average}</p>
 
             </div>
+            
+            <div className="bottom">
+
+            <div className='left'>
+            <p data-testid="movie-overview" >{movie.overview}</p>
+         
+
+            <div className='btns'>
+                <p className='red'>Top rated movies #{}</p>
+                <p>Awards 9 nominations</p>
+                <img src={Expand} alt="arrow" className='expand' />
+            </div>
+            </div>
+            <div className='right'>
+                <button className='red'>See show times</button>
+                <button className='pink'>More watch options</button>
+            </div>
+            </div>
+            
+            
+            
         </div>
-        </>
+        </div>
        
        
 
         
     )
 }
-//https://image.tmdb.org/t/p/w92/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg
-//https://image.tmdb.org/t/p/w154/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg
-//https://image.tmdb.org/t/p/w185/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg
-//https://image.tmdb.org/t/p/w342/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg
-//https://image.tmdb.org/t/p/w500/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg
-//https://image.tmdb.org/t/p/w780/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg
-//https://image.tmdb.org/t/p/original/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg
