@@ -50,7 +50,7 @@ export default function MovieCard() {
                     <p>50k people are playing now</p>
                     <button>Play NOw</button>
                 </div>
-                <a href="#"><img src={Logout} alt="logout logo"/>Logout</a>
+                <div className='logout' ><a href="#"><img src={Logout} alt="logout logo"/>Logout</a></div>
                 
         </div>
          <div className="movie-preview" >
@@ -72,7 +72,9 @@ export default function MovieCard() {
             <div className='left'>
             <p data-testid="movie-overview" >{movie.overview}</p>
          
-
+            <p>Director: <span className='see' >Tom Cruise</span> </p>
+            <p>Writers: <span className='see' >Josh, Aniekan and Thomas</span></p>
+            <p>Actors: <span className='see' > Salena Fomez and Thomas Blair</span></p>
             <div className='btns'>
                 <p className='red'>Top rated movies #{}</p>
                 <p>Awards 9 nominations</p>

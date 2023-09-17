@@ -88,7 +88,7 @@ input {
   margin-right: 5px;
 }
 .menu > #tv-logo {
-  margin: 15px;
+  margin: 10px;
 }
 
 button {
@@ -198,8 +198,13 @@ margin: auto;
   
 
 }
-.menu-preview > .logo{
+.menu-preview > .logo, .menu > #tv-logo {
+  margin: 15px;
+}
+
+.menu-preview >.logo > h2 {
   color: black;
+  margin: 0;
 }
 
 .pink-box{
@@ -343,7 +348,7 @@ ul{
   margin: 2px;
 }
   input{
-   font: 1em sans-serif;
+    width: 70%;
   }
   .search{
     width: 40%;
@@ -361,9 +366,45 @@ ul{
   display: flex ;
   flex-direction: column;
   margin: auto;
-  grid-template-columns: 1fr  ;
   align-items: center;
   justify-content: center;
 }
+ .menu-preview{
+  position: relative;
+  z-index: -3;
+  top: -10%;
+  left: 100%;
+  visibility: hidden;
+}
 
+.movie-preview{
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0;
+  z-index: 1;
+}
+.preview-container{
+  display: block;
+}
+.bottom{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.right{
+  display: flex;
+  flex-direction: column;
+  width: 90%;;
+}
+.left{
+width: 90%;
+margin: 10px;
+}
+.btns{
+  font: 0.8rem sans-serif;
+}
 }
