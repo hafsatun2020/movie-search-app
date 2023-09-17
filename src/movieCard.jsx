@@ -21,7 +21,7 @@ export default function MovieCard() {
     //get Id of movie via use params
     const { id } = useParams()
     const [movie, setMovieDetails] = useState({})
-    console.log(id)
+    //console.log(id)
 //fetch movies using params and store in a state
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/${id}`, options)
@@ -29,9 +29,12 @@ export default function MovieCard() {
             .then(data => setMovieDetails(data) )
             .catch(err => console.error(err));
     }, [])
-
+   
+    console.log()
     
-    return (
+    //console.log(genres)
+
+        return (
         <div className='preview-container'>
         < div className='menu-preview'>
                 <div className="logo">
@@ -58,10 +61,22 @@ export default function MovieCard() {
             
            
             <img src={`https://image.tmdb.org/t/p/w780${movie.backdrop_path}`} data-testid="movie-poster" id="backdrop-img" alt="backdrop" />
-            <div className="mid-div" >
+            <div className="mid-div-movie-details" >
                 <p data-testid="movie-title" >{movie.title}</p>
                 <p data-testid="movie-release-date" > {movie.release_date}</p>
                 <p data-testid="movie-runtime" > {movie.runtime}</p>
+                <div className="genres">
+                    { movie?.genres && 
+                    movie?.genres.map((genre) =>( 
+                     <p 
+                    key={genre.id} 
+                    className='see'
+                     > 
+                    {genre.name}
+                    </p> )) 
+                    }
+                     
+                  </div>
                 <img src={Star}  id="star" alt="star"/>
                 <p data-testid="movie-votes" >{ movie.vote_average}</p>
 

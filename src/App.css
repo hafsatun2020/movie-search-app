@@ -3,8 +3,8 @@
 * {
   box-sizing: border-box;
   font-family: 'DM Sans', sans-serif;
-  
 }
+
 
 body {
   text-align: center;
@@ -100,8 +100,30 @@ button {
 
 .description-box{
 margin-top: 100px;
-width: 30%;
+width: 40%;
 text-align: left;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+}
+
+.description-box > .rating{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+
+.description-box > button{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.description-box > button > img{
+  margin-right: 3px;
 }
 .heading {
   width: 90%;
@@ -116,7 +138,11 @@ text-align: left;
 .see {
   color: #BE123C;
 }
-
+.see-more > a{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .card-container {
   width: 90%;
   display: grid;
@@ -126,23 +152,14 @@ text-align: left;
   align-items: center;
 }
 
-.movie-card {
-  width: 250px;
-  height: 400px;
-  padding: 0;
 
-}
-
-.mid-div {
+.mid-div-movie-details{
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-#fav-btn {
-  color: black ;
-  background: red;
-}
+
 
 /*footer */
 .terms {
@@ -290,6 +307,99 @@ ul{
   align-items: center;
   justify-content: center;
   padding: 10px;
+}
+
+.genres{
+  font-size: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.movie-card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.mid-div-card {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.TITLE{
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.TITLE > h4{
+  margin: 0;
+  padding: 0;
+}
+.date{
+  
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.6rem;
+}
+.date > p{
+  margin-left: 3px;
+  color: #666666;
+}
+.genres-card{
+  font-size: 0.6rem;
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: flex-start;
+  
+}
+.genres-card > p{
+  margin-left: 3px;
+color: #666666;
+}
+.top-card{
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 0.8rem;
+}
+
+#poster-img{
+  z-index: 0;
+  position: relative;
+}
+
+.heart {
+  position: absolute;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin: 0 auto;
+  padding: 8px;
+  background-color: lightcyan;
+}
+.rating{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.6rem;
+}
+
+.rating > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

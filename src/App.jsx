@@ -12,7 +12,7 @@ const router = createBrowserRouter(createRoutesFromElements(
           <Route >
           <Route path="/" element={<HomePage />}  loader={homePageLoader} errorElement= {<ErrorPage />} />
           <Route path="/movies/:id" element={<MovieCard />}  />
-         
+          <Route path="*" element={<ErrorPage />} />
           </Route>
          
        

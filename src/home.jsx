@@ -5,7 +5,7 @@ import Footer from './footer'
 import Header from './header'
 import {getMovies} from'./api'
 
-
+import Right from'./images/Chevron-right.png'
 
 
 
@@ -17,6 +17,7 @@ export function loader() {
 
 export default function HomePage() {
     //fetch top rated movies x 10 and stores them in a state
+
     const moviesDataArr = useLoaderData()
     console.log(moviesDataArr)
     
@@ -38,8 +39,13 @@ export default function HomePage() {
             </div>
             <div className="container">
                 <div className="heading">
-                    <h1>Top Rated movies</h1>
-                    <a href="#" className="see more"> See more <span>  </span></a>
+                    <h1>Featured movies</h1>
+                    <div className="see-more">
+
+                    <a href="#" className="see more"><span>See more</span><img src={Right} alt="left" /></a>
+                    </div>
+                    
+                
                 </div>
                 <div className="card-container">
                         {movieCards}
