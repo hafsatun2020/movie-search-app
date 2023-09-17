@@ -9,7 +9,7 @@ const options = {
 
 export async function getMovies() {
     
-    const res = await fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
+    const res = await fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
     if (!res.ok) {
         throw {
             message: "Failed to fetch Movies", 
