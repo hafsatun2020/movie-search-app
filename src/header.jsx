@@ -26,8 +26,8 @@ export default function Header(props) {
             <div className="description-box">
                 <h1>John Wick 3 : Parabellum</h1>
                 <div className="rating">
-                    <div className='imdb'><img src={Imdb} alt="imdb icon" />  90 / 100  </div>
-                    <div className='tomato'><img src={Tomato} alt="tomatoe icon" /> 80% </div>
+                    <div className='imdb'><img src={Imdb} alt="imdb icon" /> <span> 8 / 10</span>  </div>
+                    <div className='tomato'><img src={Tomato} alt="tomatoe icon" />  <span>90 % </span>  </div>
                     </div>
                 <p>John Wick is on the run after killing a member of the international assassins guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.</p>
                 <button type="button"><img src={Play}alt="play icon" /> <span>Watch Trailer</span></button>

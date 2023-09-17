@@ -21,7 +21,7 @@ export default function Card(props) {
 
                
                 <div className='top-card'>
-                <Link to={`/movies/${props.id}`}> <img src={`https://image.tmdb.org/t/p/w185${props.poster_path}`}alt="poster" id="poster-img" data-testid="movie-poster" id="poster-img" />
+                <Link to={`/movies/${props.id}`}> <img src={`https://image.tmdb.org/t/p/w342${props.poster_path}`}alt="poster" id="poster-img" data-testid="movie-poster" id="poster-img" />
                </Link>
                <div className='heart' >
                <i class="fa-solid fa-heart"  style={styles}  onClick={Toggle} id="fav-heart" ></i>
@@ -45,8 +45,8 @@ export default function Card(props) {
                 </div> 
                
                 <div className="rating">
-                    <div className='imdb'><img src={Imdb} alt="imdb icon" />  {props.vote_average * 10} / 100  </div>
-                    <div className='tomato'><img src={Tomato} alt="tomatoe icon" />  {props.vote_average * 10} </div>
+                    <div className='imdb'><img src={Imdb} alt="imdb icon" /> <span> {props.vote_average} / 10</span>  </div>
+                    <div className='tomato'><img src={Tomato} alt="tomatoe icon" />  <span>{props.vote_average * 10} % </span>  </div>
                     </div>
                                      
             </div>

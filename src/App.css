@@ -318,7 +318,7 @@ ul{
 }
 
 .movie-card {
-  width: 200px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -377,6 +377,7 @@ color: #666666;
 #poster-img{
   z-index: 0;
   position: relative;
+  width: 250px;
 }
 
 .heart {
@@ -396,15 +397,17 @@ color: #666666;
   font-size: 0.6rem;
 }
 
-.rating > div{
+.rating > div {
   padding: 2px;
-  margin-right: 4px;
+  margin-top: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
+.rating > div > span{
+  margin-left: 4px;
+}
 @media (max-width: 580px) {
   .top{
     width: 100%;
