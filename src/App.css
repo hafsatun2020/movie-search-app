@@ -397,6 +397,8 @@ color: #666666;
 }
 
 .rating > div{
+  padding: 2px;
+  margin-right: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
