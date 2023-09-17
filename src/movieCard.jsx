@@ -30,9 +30,9 @@ export default function MovieCard() {
             .catch(err => console.error(err));
     }, [])
    
-    console.log()
+    //console.log()
     
-    //console.log(genres)
+    ///console.log(genres)
 
         return (
         <div className='preview-container'>

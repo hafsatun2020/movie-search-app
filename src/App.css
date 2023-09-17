@@ -408,6 +408,18 @@ color: #666666;
 .rating > div > span{
   margin-left: 4px;
 }
+
+#error-page{
+  margin: auto;
+  width: 400px;
+  height: 300px;
+  border: #BE123C 2px solid;
+  padding: 10px;
+  background-color: #F8E7EB;
+}
+#error-page > button > a {
+  color: #F8E7EB;
+}
 @media (max-width: 580px) {
   .top{
     width: 100%;

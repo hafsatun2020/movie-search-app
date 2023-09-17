@@ -11,8 +11,8 @@ import './App.css'
 const router = createBrowserRouter(createRoutesFromElements(
           <Route >
           <Route path="/" element={<HomePage />}  loader={homePageLoader} errorElement= {<ErrorPage />} />
-          <Route path="/movies/:id" element={<MovieCard />}  />
-          <Route path="*" element={<ErrorPage />} />
+          <Route path="/movies/:id" element={<MovieCard />} errorElement={<ErrorPage />} />
+          <Route path="*" element={<ErrorPage />} errorElement={<ErrorPage />} />
           </Route>
          
        

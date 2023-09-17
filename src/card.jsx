@@ -13,8 +13,8 @@ export default function Card(props) {
     setIsliked(prev => !prev )
     }
   
-    let genresArr = props.genres
-    console.log(props.genres)
+    //let genresArr = props.genres
+    //console.log(props.genres)
     return (
         
             <div className="movie-card" data-testid="movie-card">
