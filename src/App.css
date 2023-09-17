@@ -343,7 +343,7 @@ ul{
   margin: 2px;
 }
   input{
-    width: 70%;
+   font: 1em sans-serif;
   }
   .search{
     width: 40%;
