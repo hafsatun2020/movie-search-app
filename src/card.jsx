@@ -4,7 +4,7 @@ import Imdb from './images/imdb.svg'
 import Tomato from './images/tomatoes.svg'
 
 export default function Card(props) {
-    const [isliked, setIsliked] = React.useState(props.isliked)
+    const [isliked, setIsliked] = React.useState(false)
     const styles = {
         color: isliked ? "red" : "gray",
     }

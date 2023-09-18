@@ -9,11 +9,11 @@ import ErrorPage  from "./error-page";
 import './App.css'
 
 const router = createBrowserRouter(createRoutesFromElements(
-          <Route >
+          <Routes>
           <Route path="/" element={<HomePage />}  loader={homePageLoader} errorElement= {<ErrorPage />} />
           <Route path="/movies/:id" element={<MovieCard />} errorElement={<ErrorPage />} />
           <Route path="*" element={<ErrorPage />} errorElement={<ErrorPage />} />
-          </Route>
+          </Routes>
          
        
 ))
