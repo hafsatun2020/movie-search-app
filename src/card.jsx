@@ -13,15 +13,14 @@ export default function Card(props) {
     setIsliked(prev => !prev )
     }
   
-    //let genresArr = props.genres
-    //console.log(props.genres)
+ 
     return (
         
             <div className="movie-card" data-testid="movie-card">
 
                
                 <div className='top-card'>
-                <Link to={`/movies/${props.id}`}> <img src={`https://image.tmdb.org/t/p/w342${props.poster_path}`}alt="poster" id="poster-img" data-testid="movie-poster" id="poster-img" />
+                <Link to={`/movies/${props.id}`}> <img src={`https://image.tmdb.org/t/p/w342${props.poster_path}`}alt="poster" id="poster-img" data-testid="movie-poster"  />
                </Link>
                <div className='heart' >
                <i class="fa-solid fa-heart"  style={styles}  onClick={Toggle} id="fav-heart" ></i>

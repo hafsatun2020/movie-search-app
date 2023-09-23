@@ -33,6 +33,7 @@ body {
   color: white;
   background-image: url('./images/Poster.png');
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .navbar {

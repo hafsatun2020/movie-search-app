@@ -10,7 +10,6 @@ import Right from'./images/Chevron-right.png'
 
 
 export function loader() {
-    //throw new Error("This is an error")
     return getMovies()
 }
 
